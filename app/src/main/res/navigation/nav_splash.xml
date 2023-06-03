@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_splash"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.autonture.socialrutravel.PartUI.Splashs.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_securityCodeFragment"
+            app:destination="@id/securityCodeFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_authorizationActivity"
+            app:destination="@id/authorizationActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/securityCodeFragment"
+        android:name="com.autonture.socialrutravel.PartUI.Authorization.SecurityCodeFragment"
+        android:label="fragment_security_code"
+        tools:layout="@layout/fragment_security_code" >
+
+    </fragment>
+    <activity
+        android:id="@+id/authorizationActivity"
+        android:name="com.autonture.socialrutravel.PartUI.Authorization.AuthorizationActivity"
+        android:label="activity_authorization"
+        tools:layout="@layout/activity_authorization" />
+</navigation>

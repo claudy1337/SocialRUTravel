@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mainTour"
+        android:title="Места"
+        android:icon="@drawable/ic_menu_place"/>
+
+    <item android:id="@+id/userMessanger"
+        android:title="Сообщения"
+        android:icon="@drawable/ic_menu_message" />
+
+    <item android:id="@+id/searchTour"
+        android:icon="@drawable/ic_menu_search"
+        android:title="Поиск"/>
+
+    <item android:id="@+id/userProfile"
+        android:title="Профиль"
+        android:icon="@drawable/ic_menu_profile"/>
+
+    <item android:id="@+id/userSetting"
+        android:title="Настройки"
+        android:icon="@drawable/ic_menu_setting"/>
+
+</menu>
