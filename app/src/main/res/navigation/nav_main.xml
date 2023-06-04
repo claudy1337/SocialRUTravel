@@ -20,4 +20,19 @@
         android:name="com.autonture.socialrutravel.PartUI.MainMenu.MessangerFragment"
         android:label="fragment_messanger"
         tools:layout="@layout/fragment_messanger" />
+    <fragment
+        android:id="@+id/searchTour"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.SearchPlaceFragment"
+        android:label="fragment_search_place"
+        tools:layout="@layout/fragment_search_place" />
+    <fragment
+        android:id="@+id/mainTour"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places" />
+    <fragment
+        android:id="@+id/userSetting"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.SettingProfileFragment"
+        android:label="fragment_setting_profile"
+        tools:layout="@layout/fragment_setting_profile" />
 </navigation>
