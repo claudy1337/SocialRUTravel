@@ -12,7 +12,7 @@ import com.autonture.socialrutravel.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bindingMain: ActivityMainBinding
-    private lateinit var navController: NavController
+    lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +21,9 @@ class MainActivity : AppCompatActivity() {
         //val intent = Intent(this@MainActivity, SplashActivity::class.java)
         //startActivity(intent)
         navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
-        setupWithNavController(bindingMain.bottomNavigationView,navController)
         MAIN = this
+        setupWithNavController(bindingMain.bottomNavigationView,navController)
+
        //
        // setupWithNavController(bindingMain.bottomNavigationView,navController)
     }

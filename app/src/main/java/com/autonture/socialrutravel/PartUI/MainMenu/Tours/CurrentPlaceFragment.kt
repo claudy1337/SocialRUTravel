@@ -1,4 +1,4 @@
-package com.autonture.socialrutravel.PartUI.MainMenu
+package com.autonture.socialrutravel.PartUI.MainMenu.Tours
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,20 +8,18 @@ import android.view.ViewGroup
 import com.autonture.socialrutravel.R
 
 
-class SearchPlaceFragment : Fragment() {
-
+class CurrentPlaceFragment : Fragment() {
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_search_place, container, false)
+        return inflater.inflate(R.layout.fragment_current_place, container, false)
     }
 
     companion object {
-
         @JvmStatic
-        fun newInstance() = SearchPlaceFragment()
+        fun newInstance() = CurrentPlaceFragment()
     }
 }

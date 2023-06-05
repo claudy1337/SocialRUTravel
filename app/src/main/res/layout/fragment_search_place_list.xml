@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PartUI.MainMenu.PlacesFragment">
-
+    tools:context=".PartUI.MainMenu.Tours.SearchPlaceListFragment">
 
     <TextView
+        android:id="@+id/txtsearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Place"
-        android:textSize="30dp"
+        android:text="Search List Place"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

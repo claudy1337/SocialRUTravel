@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tour"
+    app:startDestination="@id/homeTourFragment">
+
+    <fragment
+        android:id="@+id/homeTourFragment"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.HomeTourFragment"
+        android:label="fragment_home_tour"
+        tools:layout="@layout/fragment_home_tour" >
+    </fragment>
+</navigation>

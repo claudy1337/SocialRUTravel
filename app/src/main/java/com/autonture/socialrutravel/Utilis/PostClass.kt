@@ -19,7 +19,7 @@ data class PostClass(val token:String, val userName:String, val userLogin:String
         parcel.writeString(userName)
         parcel.writeString(userLogin)
         parcel.writeString(title)
-        parcel.writeInt(image)
+        parcel.writeInt(image!!)
     }
 
     override fun describeContents(): Int {

@@ -16,23 +16,49 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
+        android:id="@+id/mainTour"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.CurrentTourFragment"
+        android:label="fragment_current_tour"
+        tools:layout="@layout/fragment_current_tour" >
+        <action
+            android:id="@+id/action_mainTour_to_currentPlaceFragment"
+            app:destination="@id/currentPlaceFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/userMessanger"
         android:name="com.autonture.socialrutravel.PartUI.MainMenu.MessangerFragment"
         android:label="fragment_messanger"
         tools:layout="@layout/fragment_messanger" />
     <fragment
         android:id="@+id/searchTour"
-        android:name="com.autonture.socialrutravel.PartUI.MainMenu.SearchPlaceFragment"
-        android:label="fragment_search_place"
-        tools:layout="@layout/fragment_search_place" />
-    <fragment
-        android:id="@+id/mainTour"
-        android:name="com.autonture.socialrutravel.PartUI.MainMenu.PlacesFragment"
-        android:label="fragment_places"
-        tools:layout="@layout/fragment_places" />
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.HomeTourFragment"
+        android:label="fragment_home_tour"
+        tools:layout="@layout/fragment_home_tour" >
+        <action
+            android:id="@+id/action_searchTour_to_searchPlaceListFragment2"
+            app:destination="@id/searchPlaceListFragment2" />
+        <action
+            android:id="@+id/action_searchTour_to_mainTour"
+            app:destination="@id/mainTour" />
+    </fragment>
     <fragment
         android:id="@+id/userSetting"
         android:name="com.autonture.socialrutravel.PartUI.MainMenu.SettingProfileFragment"
         android:label="fragment_setting_profile"
         tools:layout="@layout/fragment_setting_profile" />
+    <fragment
+        android:id="@+id/searchPlaceListFragment2"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.SearchPlaceListFragment"
+        android:label="fragment_search_place_list"
+        tools:layout="@layout/fragment_search_place_list" >
+        <action
+            android:id="@+id/action_searchPlaceListFragment2_to_mainTour"
+            app:destination="@id/mainTour" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentPlaceFragment"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.CurrentPlaceFragment"
+        android:label="fragment_current_place"
+        tools:layout="@layout/fragment_current_place" />
+
 </navigation>
