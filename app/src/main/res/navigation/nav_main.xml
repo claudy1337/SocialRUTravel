@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_searchTour_to_mainTour"
             app:destination="@id/mainTour" />
+        <action
+            android:id="@+id/action_searchTour_to_currentPlaceFragment"
+            app:destination="@id/currentPlaceFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSetting"
@@ -60,5 +63,19 @@
         android:name="com.autonture.socialrutravel.PartUI.MainMenu.Tours.CurrentPlaceFragment"
         android:label="fragment_current_place"
         tools:layout="@layout/fragment_current_place" />
+    <fragment
+        android:id="@+id/searchApartments"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Apartments.RoomSearchFragment"
+        android:label="fragment_room_search"
+        tools:layout="@layout/fragment_room_search" >
+        <action
+            android:id="@+id/action_searchApartments_to_apartmentFragment"
+            app:destination="@id/apartmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apartmentFragment"
+        android:name="com.autonture.socialrutravel.PartUI.MainMenu.Apartments.ApartmentFragment"
+        android:label="fragment_apartment"
+        tools:layout="@layout/fragment_apartment" />
 
 </navigation>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.setFragmentResultListener
 import com.autonture.socialrutravel.R
 import com.autonture.socialrutravel.Utilis.MAIN
 import com.autonture.socialrutravel.databinding.FragmentCurrentTourBinding
@@ -20,6 +21,15 @@ class CurrentTourFragment : Fragment() {
         }
 
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setFragmentResultListener("requestTourKey") { key, bundle ->
+            val result = bundle.getString("bundleTourKey")
+            binding.textView3.text = result
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
