@@ -3,39 +3,49 @@ package com.autonture.socialrutravel.PartUI.MainMenu.Tours.Recyclers
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.autonture.socialrutravel.R
 import com.autonture.socialrutravel.Utilis.PlaceClass
 import com.autonture.socialrutravel.Utilis.TourClass
+import com.autonture.socialrutravel.WorkApi.Models.Towns
 import com.autonture.socialrutravel.databinding.PlaceItemBinding
 import com.autonture.socialrutravel.databinding.SearchCityItemBinding
 
-class SearchCityAdapter(private val entriesList: ArrayList<TourClass>): RecyclerView.Adapter<SearchCityAdapter.EntriesHolder>() {
+class SearchCityAdapter : ListAdapter<Towns, SearchCityAdapter.Holder>(Comparator()) {
 
-    var onItemClick: ((TourClass) -> Unit)? = null
-    class EntriesHolder(item: View): RecyclerView.ViewHolder(item){
-        val binding =  SearchCityItemBinding.bind(item)
-
-        fun bind(entries: TourClass) = with(binding){
-            cityName.text = entries.name
-            cityTitle.text = entries.title
+    var onItemClick: ((Towns) -> Unit)? = null
+    class Holder(view: View):RecyclerView.ViewHolder(view){
+        private val binding = SearchCityItemBinding.bind(view)
+        fun bind(town:Towns) = with(binding){
+            cityName.text = town.name
+            cityTitle.text = town.description
         }
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntriesHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.search_city_item, parent, false)
-        return EntriesHolder(view)
-    }
-
-    override fun getItemCount(): Int {
-        return entriesList.size
-    }
-
-    override fun onBindViewHolder(holder: EntriesHolder, position: Int) {
-        val posts = entriesList[position]
-        holder.bind(entriesList[position])
-        holder.itemView.setOnClickListener {
-            onItemClick?.invoke(posts)
+    class Comparator: DiffUtil.ItemCallback<Towns>(){
+        override fun areItemsTheSame(oldItem: Towns, newItem: Towns): Boolean {
+            return oldItem.id == newItem.id
         }
+
+        override fun areContentsTheSame(oldItem: Towns, newItem: Towns): Boolean {
+            return oldItem == newItem
+        }
+
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.search_city_item, parent, false)
+        return Holder(view)
+    }
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+       // val towns = apartmentList[position]
+        holder.bind(getItem(position))
+       // holder.itemView.setOnClickListener {
+       //     onItemClick?.invoke(towns)
+       // }
+    }
+
+
 }

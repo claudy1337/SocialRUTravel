@@ -70,7 +70,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:elevation="8dp"
-                            android:fontFamily="@font/inter_bold"
+                            android:fontFamily="@font/poppins_bold"
                             android:gravity="center"
                             android:text="Название"
                             android:textColor="@color/white"
@@ -86,7 +86,7 @@
                             android:layout_marginBottom="20dp"
                             android:autoSizeTextType="uniform"
                             android:elevation="8dp"
-                            android:fontFamily="@font/inter"
+                            android:fontFamily="@font/poppins_medium"
                             android:maxWidth="280dp"
                             android:layout_marginTop="5dp"
                             android:text="@string/title"
@@ -98,11 +98,12 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/inter_bold"
+                android:fontFamily="@font/poppins_bold"
                 android:text="Описание"
                 android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="@+id/cardView"
@@ -113,18 +114,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/inter_medium"
+                android:fontFamily="@font/poppins_medium"
                 android:maxWidth="350dp"
                 android:text="@string/title"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/inter_bold"
+                android:fontFamily="@font/poppins_bold"
                 android:text="Место"
                 android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -170,11 +172,12 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/inter_bold"
+                android:fontFamily="@font/poppins_bold"
                 android:text="Изображения"
                 android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="@+id/textView9"
@@ -204,7 +207,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
+                android:fontFamily="@font/poppins"
                 android:maxWidth="230dp"
                 android:text="@string/title"
                 app:layout_constraintEnd_toEndOf="parent"

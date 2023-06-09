@@ -8,6 +8,8 @@ import com.autonture.socialrutravel.R
 import com.autonture.socialrutravel.databinding.UserPostItemBinding
 
 class PostAdapter (private val postList: ArrayList<PostClass>): RecyclerView.Adapter<PostAdapter.EntriesHolder>() {
+
+
     var onItemClick: ((PostClass) -> Unit)? = null
 
     class EntriesHolder(item: View) : RecyclerView.ViewHolder(item) {

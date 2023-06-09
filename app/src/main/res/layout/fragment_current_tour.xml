@@ -68,7 +68,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:elevation="8dp"
-                    android:fontFamily="@font/inter_bold"
+                    android:fontFamily="@font/poppins_bold"
                     android:gravity="center"
                     android:text="Название"
                     android:textColor="@color/white"
@@ -83,7 +83,7 @@
                     android:layout_marginBottom="20dp"
                     android:autoSizeTextType="uniform"
                     android:elevation="8dp"
-                    android:fontFamily="@font/inter"
+                    android:fontFamily="@font/poppins_medium"
                     android:maxWidth="280dp"
                     android:layout_marginLeft="30dp"
                     android:text="@string/title"
@@ -98,270 +98,47 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
+        android:fontFamily="@font/poppins_bold"
         android:text="Описание"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_medium"
-        android:maxWidth="350dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/title"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:maxWidth="350dp"
+                android:text="@string/title"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginBottom="80dp"
                 android:id="@+id/constraint2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="80dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardPlace2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    app:cardCornerRadius="16dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topPlaceList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/cardPost">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/placeImage2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/place_default"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/txtName2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Славиться"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            app:layout_constraintBottom_toTopOf="@+id/txtTitle2"
-                            app:layout_constraintStart_toStartOf="@+id/txtTitle2" />
-
-                        <TextView
-                            android:id="@+id/txtTitle2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:fontFamily="@font/inter"
-                            android:text="Что это?"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardPost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    app:cardCornerRadius="16dp"
-                    android:layout_marginRight="10dp"
-                    app:layout_constraintEnd_toStartOf="@+id/cardPlace2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/placeImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/place_default2" />
-
-                        <TextView
-                            android:id="@+id/txtName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Славиться"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            app:layout_constraintBottom_toTopOf="@+id/txtTitle"
-                            app:layout_constraintStart_toStartOf="@+id/txtTitle" />
-
-                        <TextView
-                            android:id="@+id/txtTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Что это?"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardPost3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintEnd_toEndOf="@+id/cardPlace2"
-                    app:layout_constraintTop_toBottomOf="@+id/cardPlace2">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/placeImage3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/place_default2" />
-
-                        <TextView
-                            android:id="@+id/txtName3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Славиться"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            app:layout_constraintBottom_toTopOf="@+id/txtTitle3"
-                            app:layout_constraintStart_toStartOf="@+id/txtTitle3" />
-
-                        <TextView
-                            android:id="@+id/txtTitle3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:fontFamily="@font/inter"
-                            android:text="Что это?"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardPlace4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintStart_toStartOf="@+id/cardPost"
-                    app:layout_constraintTop_toBottomOf="@+id/cardPost">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/placeImage4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/place_default"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/txtName4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Славиться"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            app:layout_constraintBottom_toTopOf="@+id/txtTitle4"
-                            app:layout_constraintStart_toStartOf="@+id/txtTitle4" />
-
-                        <TextView
-                            android:id="@+id/txtTitle4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:fontFamily="@font/inter"
-                            android:text="Что это?"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:maxWidth="340dp"
-                    android:maxHeight="142dp"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintEnd_toEndOf="@+id/cardPost3"
-                    app:layout_constraintStart_toStartOf="@+id/cardPlace4"
-                    app:layout_constraintTop_toBottomOf="@+id/cardPlace4">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/place_default3" />
-
-                        <TextView
-                            android:id="@+id/txtName5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_medium"
-                            android:text="Славиться"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            app:layout_constraintBottom_toTopOf="@+id/txtTitle5"
-                            app:layout_constraintStart_toStartOf="@+id/txtTitle5" />
-
-                        <TextView
-                            android:id="@+id/txtTitle5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:fontFamily="@font/inter"
-                            android:text="Что это?"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

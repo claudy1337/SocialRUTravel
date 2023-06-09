@@ -27,7 +27,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/backround_image"
+                    android:background="@drawable/ic_user_default"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="Aboba Aboba"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="25dp"
                     app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:text="aboba_boba"
+                    android:text=""
                     app:layout_constraintEnd_toEndOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="@+id/textView"
                     app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -96,7 +96,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:fontFamily="@font/poppins"
-                                android:text="Друзья"
+                                android:text="Рейтинг"
                                 android:textAlignment="center"
                                 android:textColor="#4E4E4E"
                                 android:textSize="16dp" />
@@ -108,25 +108,27 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:fontFamily="@font/poppins_bold"
-                                android:text="132"
+                                android:text=" "
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="25dp" />
 
                             <TextView
+                                android:id="@+id/countTravel"
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:fontFamily="@font/poppins_bold"
-                                android:text="132"
+                                android:text=" "
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="25dp" />
 
                             <TextView
+                                android:id="@+id/rating"
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:fontFamily="@font/poppins_bold"
-                                android:text="132"
+                                android:text=" "
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="25dp" />
@@ -145,7 +147,7 @@
                     android:fontFamily="@font/poppins"
                     android:textStyle="normal"
                     android:layout_marginTop="15dp"
-                    android:id="@+id/button"
+                    android:id="@+id/buttonProfile"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +161,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button">
+                    app:layout_constraintTop_toBottomOf="@+id/buttonProfile">
 
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/tablayout"
